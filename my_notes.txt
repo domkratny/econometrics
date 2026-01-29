@@ -1,11 +1,27 @@
 echo "# econometrics" >> README.md
 git init
 git add README.md
-git commit -m "first commit"
+
 git branch -M main
 git remote add origin https://github.com/domkratny/econometrics.git
 
 git config --global user.email "domkrat@gmail.com"
 git config --global user.name "Vladimir Kolyshev"
 
+git commit -m "initial check-in"
+
 git push -u origin main
+
+
+= = = =
+How to create a new conda environbment ?
+= = = =
+conda create -n econometrics
+conda activate econometrics
+
+conda update -n base -c defaults conda
+conda install matplotlib
+conda install pandas openpyxl xlsxwriter scipy
+conda install -c conda-forge yfinance
+conda install -c conda-forge pandas-datareader
+conda install -c conda-forge statsmodels
